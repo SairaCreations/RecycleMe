@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.sairacreations.recycleme.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_myContribution"
+            app:destination="@id/myContribution" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.sairacreations.recycleme.RecycleFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_CameraFragment2"
+            app:destination="@id/CameraFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_CameraFragment"
+            app:destination="@id/CameraFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_manualEntryFragment"
+            app:destination="@id/manualEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="com.sairacreations.recycleme.CameraFragment"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_CameraFragment_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manualEntryFragment"
+        android:name="com.sairacreations.recycleme.ManualEntryFragment"
+        android:label="fragment_manual_entry"
+        tools:layout="@layout/fragment_manual_entry" >
+        <action
+            android:id="@+id/action_manualEntryFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myContribution"
+        android:name="com.sairacreations.recycleme.MyContribution"
+        android:label="fragment_my_contribution"
+        tools:layout="@layout/fragment_my_contribution" >
+        <action
+            android:id="@+id/action_myContribution_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
